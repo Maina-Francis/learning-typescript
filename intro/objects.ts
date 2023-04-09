@@ -13,14 +13,18 @@
 //   return { name: "Typescript", price: 50 };
 // }
 
+// Type Aliases
+
 type User = {
   name: string;
   email: string;
-  isLoggedIn: boolean;
+  isActive: boolean;
 };
 
 function createUser(user: User): User {
-  return { name: "", email: "", isLoggedIn: false };
+  return { name: "", email: "", isActive: true };
 }
+
+createUser({ name: "", email: "", isActive: true });
 
 export {};
