@@ -12,9 +12,7 @@ function getUpper(value) {
 // If the function takes more than 1 parameter
 function employee(name, email, isPaid) { }
 // default function parameters
-var logInUser = function (name, email, isPaid) {
-    if (isPaid === void 0) { isPaid = false; }
-};
+let logInUser = (name, email, isPaid = false) => { };
 logInUser("Franc", "franc@f.com"); //won't result in error because isPaid has a default value
 // returning more than one type
 // function getValue(value: number) {
@@ -24,12 +22,12 @@ logInUser("Franc", "franc@f.com"); //won't result in error because isPaid has a 
 //   return "200 OK"; //string
 // }
 // arrow funcs
-var getHello = function (str) {
+const getHello = (str) => {
     return "hello" + str;
 };
-var heros = ["Thor", "Superman", "Batman"];
-heros.map(function (hero) {
-    return "My hero is ".concat(hero);
+const heros = ["Thor", "Superman", "Batman"];
+heros.map((hero) => {
+    return `My hero is ${hero}`;
 });
 // using void when the function isn't expected to return anything
 function consoleError(errorMessage) {

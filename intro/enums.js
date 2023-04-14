@@ -7,5 +7,5 @@ var SeatChoices;
     SeatChoices[SeatChoices["MIDDLE"] = 2] = "MIDDLE";
     SeatChoices[SeatChoices["WINDOW"] = 3] = "WINDOW";
 })(SeatChoices || (SeatChoices = {}));
-var seat = SeatChoices.AISLE;
+const seat = SeatChoices.AISLE;
 console.log(seat);
