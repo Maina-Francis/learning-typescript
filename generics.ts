@@ -26,3 +26,15 @@ function identityFour<T>(val: T): T {
   return val;
 }
 identityFour(6);
+
+// Generics in Arrays and Type Functions
+function getSearchProduct<T>(val: T[]): T {
+  // do some complex operations
+  const myIndex = 4;
+  return val[myIndex];
+}
+
+// arrow func
+const getSearchProductOne = <T>(val: T[]): T => {
+  return val[5];
+};
