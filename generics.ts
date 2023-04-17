@@ -38,3 +38,11 @@ function getSearchProduct<T>(val: T[]): T {
 const getSearchProductOne = <T>(val: T[]): T => {
   return val[5];
 };
+
+// Generics classes
+function anotherFunc<T, U>(valueOne: T, valueTwo: U): object {
+  return {
+    valueOne,
+    valueTwo,
+  };
+}
