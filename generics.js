@@ -42,4 +42,17 @@ function anotherFunc(valueOne, valueTwo) {
 function anotherFunction(valueOne, valueTwo, valueThree) {
     return { valueOne, valueTwo, valueThree };
 }
-console.log(anotherFunction("Hello", "World", { connection: "str", userName: "erNa", password: "94894gj", id: 5 }));
+console.log(anotherFunction("Hello", "World", {
+    connection: "str",
+    userName: "erNa",
+    password: "94894gj",
+    id: 5,
+}));
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
