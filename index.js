@@ -11,13 +11,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //   }
 // }
 // Professional way of writing it:
-var Users = /** @class */ (function () {
-    function Users(email, name) {
+class Users {
+    constructor(email, name) {
         this.email = email;
         this.name = name;
         this.city = "Nairobi";
+        this.courseCount = 1;
     }
-    return Users;
-}());
-var frank = new Users("f@f,com", "Frank");
-frank.city;
+}
+const frank = new Users("f@f,com", "Frank");
+// frank.city;
+// inherit a class, but can't inherit private modifiers
+class SubUser extends Users {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this.courseCount = 4;
+    }
+}

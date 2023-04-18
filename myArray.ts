@@ -1,6 +1,6 @@
-const superHeroes: string[] = [];
+// const superHeroes: string[] = [];
 
-// alternative syntax
-const age: Array<number> = [];
+// // alternative syntax
+// const age: Array<number> = [];
 
-superHeroes.push("Batman");
+// superHeroes.push("Batman");

@@ -46,3 +46,46 @@ function anotherFunc<T, U>(valueOne: T, valueTwo: U): object {
     valueTwo,
   };
 }
+
+interface Database {
+  connection: string;
+  userName: string;
+  password: string;
+  id: number;
+}
+
+function anotherFunction<T, U, V extends Database>(
+  valueOne: T,
+  valueTwo: U,
+  valueThree: V
+): object {
+  return { valueOne, valueTwo, valueThree };
+}
+
+console.log(
+  anotherFunction("Hello", "World", {
+    connection: "str",
+    userName: "erNa",
+    password: "94894gj",
+    id: 5,
+  })
+);
+
+interface Quiz {
+  name: string;
+  type: string;
+}
+
+interface Course {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class Sellable<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}

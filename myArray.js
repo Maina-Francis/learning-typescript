@@ -1,5 +1,5 @@
 "use strict";
-const superHeroes = [];
-// alternative syntax
-const age = [];
-superHeroes.push("Batman");
+// const superHeroes: string[] = [];
+// // alternative syntax
+// const age: Array<number> = [];
+// superHeroes.push("Batman");
