@@ -78,3 +78,16 @@ function logValue(x: Date | string) {
 
 let today = new Date();
 logValue(today);
+
+// Type Predicates
+type Fish = {
+  swim: () => void;
+};
+
+type Bird = {
+  fly: () => void;
+};
+
+function isFish(animal: Fish | Bird): animal is Fish {
+  return (animal as Fish).swim !== undefined;
+}

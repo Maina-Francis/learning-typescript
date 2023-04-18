@@ -47,3 +47,6 @@ function logValue(x) {
 }
 let today = new Date();
 logValue(today);
+function isFish(animal) {
+    return animal.swim !== undefined;
+}
