@@ -50,3 +50,22 @@ logValue(today);
 function isFish(animal) {
     return animal.swim !== undefined;
 }
+function getArea(shape) {
+    if (shape.kind === "circle") {
+        return shape.radius * Math.PI ** 2;
+    }
+    shape.side ** 2;
+}
+function shapeArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            return shape.radius * Math.PI ** 2;
+        case "square":
+            return shape.side ** 2;
+        case "rectangle":
+            return shape.length * shape.width;
+        default:
+            const defaultforshape = shape;
+            return defaultforshape;
+    }
+}

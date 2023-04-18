@@ -91,3 +91,46 @@ type Bird = {
 function isFish(animal: Fish | Bird): animal is Fish {
   return (animal as Fish).swim !== undefined;
 }
+
+// Discriminated Unions
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+
+interface Square {
+  kind: "square";
+  side: number;
+}
+
+interface Rectangle {
+  kind: "rectangle";
+  length: number;
+  width: number;
+}
+
+function getArea(shape: Circle | Square) {
+  if (shape.kind === "circle") {
+    return shape.radius * Math.PI ** 2;
+  }
+  shape.side ** 2;
+}
+
+// Exhaustiveness Checking using switch statements
+type Shape = Circle | Square | Rectangle;
+function shapeArea(shape: Shape) {
+  switch (shape.kind) {
+    case "circle":
+      return shape.radius * Math.PI ** 2;
+
+    case "square":
+      return shape.side ** 2;
+
+    case "rectangle":
+      return shape.length * shape.width;
+
+    default:
+      const defaultforshape: never = shape;
+      return defaultforshape;
+  }
+}
