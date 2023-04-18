@@ -35,3 +35,15 @@ let John = {
     subject: "Science",
 };
 isTeacher(Mary);
+// instanceof narrowing
+// Checks whether a variable of a parameter, is an instance of a certain class
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.getFullYear());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+let today = new Date();
+logValue(today);
